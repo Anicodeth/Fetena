@@ -1,0 +1,14 @@
+<div class="tailor-container">
+    <div class = "tailor">
+        <form [formGroup]="quizTailor">
+            <label for = "category">Category</label>
+            <input id="category" formControlName = "category"><br>
+            <label for = "difficulty">Difficulty</label>
+            <input id="difficulty" formControlName = "difficulty"><br>
+            <label for = "limit">No. of Questions</label>
+            <input id="limit" formControlName = "limit"><br>
+            <input type = "submit" (click) = "getQuiz()" value = "Generate Quiz">
+        </form>
+    </div>
+</div>
+
