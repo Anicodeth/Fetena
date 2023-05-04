@@ -1,0 +1,107 @@
+/* Style for the quiz question */
+.questions-container{
+  width: 100%;
+}
+.questions{
+  width:90%;
+  margin:auto;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .question h2 {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: #1d3557;
+    font-family: monospace !important;
+  }
+  
+  .question p {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    color: #457b9d;
+    font-weight: bolder;
+  }
+  
+  .question ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .question li {
+    margin-bottom: 0.6rem;
+    font-family:monospace;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+
+  
+  .question input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .question input[type="radio"]:checked + label {
+    color: #00b4d8;
+    font-weight: bold;
+  }
+  
+  .question .explanation {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #457b9d;
+  }
+  
+  .question .tip {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #a8dadc;
+  }
+  
+
+/* CSS styles for the progress bar */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #0077cc;
+    transition: width 0.2s ease-in-out;
+  }
+
+  /* CSS styles for the quiz choices */
+.quiz-choice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: #eaf2fa;
+  }
+  
+  .quiz-choice input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .quiz-choice label {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .quiz-choice label:hover {
+    color: #0077cc;
+  }
+  

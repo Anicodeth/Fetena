@@ -1,1 +1,39 @@
-<p>quizarea works!</p>
+<div class="progress-bar">
+    <div class="progress-bar-fill" [style.width]="pro"></div>
+  </div>
+<div class = "questions-container">
+  <div class = "questions">
+<div *ngFor = "let question of questions; let i = index "class="question">
+    <h2>Question {{ i }}:</h2>
+    <p >{{ question.question }}</p>
+    <p>{{ question.description }}</p>
+    <ul>
+     
+      <li class = "quiz-choice alert alert-primary">
+
+          <input type="radio" (click)="incrementDone(i)" name="q{{ question.id }}" value="{{ question.answers.answer_a }}">
+          {{ question.answers.answer_a }}
+
+      </li>
+      <li class = "quiz-choice alert alert-primary">
+        
+          <input type="radio" (click)="incrementDone(i)"  name="q{{ question.id }}" value="{{ question.answers.answer_b }}">
+          {{ question.answers.answer_b }}
+    
+      </li>
+      <li *ngIf = "question.answers.answer_c" class = "quiz-choice alert alert-primary">
+  
+          <input type="radio" (click)="incrementDone(i)" name="q{{ question.id }}" value="{{ question.answers.answer_c }}">
+          {{ question.answers.answer_c }}
+
+      </li>
+      <li *ngIf = "question.answers.answer_d" (click)="incrementDone(i)" class = "quiz-choice alert alert-primary">
+          <input type="radio"   name="q{{ question.id }}" value="{{ question.answers.answer_d }}">
+          {{ question.answers.answer_d }}
+
+      </li>
+   
+    </ul>
+  </div>
+</div>
+</div>
