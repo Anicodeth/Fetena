@@ -105,3 +105,7 @@
     color: #0077cc;
   }
   
+button{
+  width:100%;
+  margin-bottom: 3rem;
+}

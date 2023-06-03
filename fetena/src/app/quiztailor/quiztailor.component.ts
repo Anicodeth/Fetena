@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms'
 import { Router } from '@angular/router';
 import { QuizapiService } from '../quizapi.service';
+
+
+
 @Component({
   selector: 'app-quiztailor',
   templateUrl: './quiztailor.component.html',

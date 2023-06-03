@@ -2,16 +2,19 @@
     <div class = "tailor">
         <form [formGroup]="quizTailor">
 
-            <label for="category">Category</label><br>
-            <select class = "form-control" formControlName = "category" name="category" id="category">
-            <option value="linux">Linux</option>
-            <option value="docker">Docker</option>
-            </select><br>
+                <label for="category">Category</label><br>
+                <select class = "form-control" formControlName = "category" name="category" id="category">
+                    <option value="linux">Linux</option>
+                    <option value="docker">Docker</option>
+                </select><br>
+
             <label for = "difficulty">Difficulty</label><br>
             <input class = "form-control" id="difficulty" formControlName = "difficulty"><br>
+           
             <label for = "limit">No. of Questions</label><br>
             <input class = "form-control" id="limit" formControlName = "limit"><br>
             <input class = "getquiz btn btn-primary" type = "submit" (click) = "getQuiz()" value = "Generate Quiz">
+        
         </form>
     </div>
 </div>

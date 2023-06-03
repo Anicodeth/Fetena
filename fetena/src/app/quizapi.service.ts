@@ -16,8 +16,9 @@ export class QuizapiService {
         params['apiKey'] = '2t0zYFmvHIYtdS8Qq5ZnWNxhkUxdjjbMemA66qFl';
         this.http.get(`https://quizapi.io/api/v1/questions`, {params:params}).subscribe((data)=>{
           this.questions = data;
+          sessionStorage.setItem('quizQuestions', JSON.stringify(this.questions));
           this.router.navigate(['quiz'], { relativeTo: this.route });
 
-        })
+    });
   }
 }

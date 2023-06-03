@@ -9,18 +9,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { QuizareaComponent } from './quizarea/quizarea.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { QuizresultComponent } from './quizresult/quizresult.component';
 
-const appRoutes: Routes = [
-  { path: '', component: QuiztailorComponent },
-  { path: 'quiz', component: QuizareaComponent },
-];
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     QuiztailorComponent,
-    QuizareaComponent
+    QuizareaComponent,
+    QuizresultComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +27,6 @@ const appRoutes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
