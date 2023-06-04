@@ -1,5 +1,5 @@
 <div class="progress-bar">
-    <div class="progress-bar-fill" [style.width]="pro"></div>
+    <div class="progress-bar-fill" [style.width]="progress"></div>
   </div>
 
 <div class = "questions-container">
@@ -12,23 +12,23 @@
      
       <li class = "quiz-choice alert alert-primary">
 
-          <input type="radio" (click)="incrementDone(i)" name="q{{ question.id }}" value="{{ question.answers.answer_a }}">
+          <input type="radio" (click)="incrementDone(i, 'a')" name="q{{ question.id }}" value="{{ question.answers.answer_a }}">
           {{ question.answers.answer_a }}
 
       </li>
       <li class = "quiz-choice alert alert-primary">
         
-          <input type="radio" (click)="incrementDone(i)"  name="q{{ question.id }}" value="{{ question.answers.answer_b }}">
+          <input type="radio" (click)="incrementDone(i, 'b')"  name="q{{ question.id }}" value="{{ question.answers.answer_b }}">
           {{ question.answers.answer_b }}
     
       </li>
       <li *ngIf = "question.answers.answer_c" class = "quiz-choice alert alert-primary">
   
-          <input type="radio" (click)="incrementDone(i)" name="q{{ question.id }}" value="{{ question.answers.answer_c }}">
+          <input type="radio" (click)="incrementDone(i, 'c')" name="q{{ question.id }}" value="{{ question.answers.answer_c }}">
           {{ question.answers.answer_c }}
 
       </li>
-      <li *ngIf = "question.answers.answer_d" (click)="incrementDone(i)" class = "quiz-choice alert alert-primary">
+      <li *ngIf = "question.answers.answer_d" (click)="incrementDone(i, 'd')" class = "quiz-choice alert alert-primary">
           <input type="radio"   name="q{{ question.id }}" value="{{ question.answers.answer_d }}">
           {{ question.answers.answer_d }}
 
@@ -36,7 +36,7 @@
    
     </ul>
   </div>
-  <button class = "btn btn-primary">Submit</button>
+  <button class = "btn btn-primary" [disabled]="enableButton" (click) = "results()">Submit</button>
 </div>
 
 </div>
