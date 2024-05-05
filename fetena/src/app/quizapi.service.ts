@@ -11,8 +11,6 @@ export class QuizapiService {
 
   generateQuiz(params:any){
 
-        console.log(params.category);
-
         params['apiKey'] = '2t0zYFmvHIYtdS8Qq5ZnWNxhkUxdjjbMemA66qFl';
         this.http.get(`https://quizapi.io/api/v1/questions`, {params:params}).subscribe((data)=>{
           this.questions = data;
