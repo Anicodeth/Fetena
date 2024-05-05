@@ -3,8 +3,6 @@ import { FormControl, FormGroup } from '@angular/forms'
 import { Router } from '@angular/router';
 import { QuizapiService } from '../quizapi.service';
 
-
-
 @Component({
   selector: 'app-quiztailor',
   templateUrl: './quiztailor.component.html',
@@ -26,6 +24,5 @@ quizTailor = new FormGroup({
 getQuiz(){
   this.quiz.generateQuiz(this.quizTailor.value);
 }
-
 
 }
